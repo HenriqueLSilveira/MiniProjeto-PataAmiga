@@ -74,9 +74,9 @@ Os marcos da entrega estavam em outro formato, YYYY-MM-DD, e foram tratados sepa
 -------
 Os valores também não estavam padronizados. Foram encontrados casos como:
 
-R$ 1.850,00\
+R$ 1.850,00
 
-1850.00\
+1850.00
 
 Os valores vazios ou representados por - foram mantidos como NULL. 
 
@@ -116,8 +116,8 @@ Os canais foram transformados em:
 Para WHATS foi colocado antes de APP, porque a palavra WhatsApp contém “APP”.
 
 -------
-Diagnóstico da origem
-    Antes do tratamento, os principais problemas encontrados foram:
+Valores encontrados nos dados de origem:
+    
 
 | Indicador | Quantidade |
 |---|---:|
@@ -133,21 +133,22 @@ Diagnóstico da origem
 | Despacho em branco | 1.665 |
 | Entrega em branco | 1.953 |
 
-    Esses problemas foram considerados no processo de carga.
+Esses problemas foram considerados no processo de carga.
 
-Diagrama da Modelagem
-Este diagrama apresenta o modelo dimensional do projeto.
+## Diagrama da Modelagem
+Imagem com diagrama do modelo dimensional do projeto.
 
-No centro temos a fato_pedido, com uma linha para cada pedido. Ela se relaciona às dimensões de loja, categoria e tempo, sendo que a dim_tempo é utilizada tanto para a data do pedido quanto para a data da entrega.
+Com a fato_pedido, contendo uma linha para cada pedido. Tem relação com relaciona às dimensões de loja, categoria e tempo, e dim_tempo, também utilizada tanto para a data do pedido quanto para a data da entrega.
 
 Já a dimensão praça é relacionada por meio da bridge_loja_praca, permitindo representar lojas que atendem mais de uma praça e realizar o rateio do faturamento.
 
-![alt text](<Diagrama Mini Projeto Pata Amiga.png>)
+![Imagem da modelagem do banco](diagrama.png>)
 
-RESPOSTAS DAS ANÁLISES
+## ANÁLISES
+
 1. Onde está o gargalo da entrega?
 
-O resultado por porte de loja foi:
+Resultado consulta:
 
 | Porte | Integração → Separação | Separação → Nota | Nota → Despacho | Despacho → Entrega | Total |
 
@@ -169,7 +170,8 @@ Necessário investigar possível problema operacional nessa etapa nas lojas meno
 
 2. Qual categoria representa a maior parte do faturamento?
 
-A distribuição encontrada foi:
+
+Resultado consulta:
 
 | Categoria | Faturamento | Participação |
 
@@ -199,7 +201,8 @@ Com isso, é possível validar a importância da Ração para o negócio, també
 
 3. O desconto apresenta o mesmo comportamento em todos os canais?
 
-Os tickets médios encontrados foram:
+
+Resultado consulta:
 
 | Canal | Sem desconto | Com desconto |
 
