@@ -164,13 +164,13 @@ Resultado consulta:
 
 | Grande | 1,96 | 0,64 | 3,32 | 2,01 | 7,93 |
 
-O maior tempo aparece na etapa Nota → Despacho.
+O gargalo está na etapa de NOTA >> DESPACHO.
 
-Ocorre nos três portes, porém com uma atenção maior nas de porte menor.
+É possível notar nos três tipos de porte de loja, porém nas menores esse gargalo é maior.
 
-Enquanto as lojas médias e grandes ficam próximas de 8 dias no processo total, as pequenas chegam a 15,16 dias.
+As lojas médias e grandes ficam próximas de 8 dias no processo total e as pequenas chegam a 15,16 dias.
 
-Necessário investigar possível problema operacional nessa etapa nas lojas menores.
+Verificar um possível problema operacional neste processo nas lojas menores.
 
 2. Qual categoria representa a maior parte do faturamento?
 
@@ -195,13 +195,11 @@ Resultado consulta:
 
 | Brinquedo | R$ 31.634,56 | 1,76% |
 
-A Ração representa aproximadamente 60% do faturamento.
+A Ração representa aproximadamente 60% do faturamento em todos os portes de loja.
 
-Também foi verificado o resultado por porte e a categoria continua sendo a de maior faturamento nas lojas pequenas, médias e grandes.
+Há uma receita considerável nessa categoria, sendo a categoria de maior importância atualmente.
 
-Isso mostra que a rede possui uma concentração considerável de receita nessa categoria.
-
-Com isso, é possível validar a importância da Ração para o negócio, também seria interessante acompanhar as outras categorias para evitar uma dependência muito grande de apenas uma delas.
+É interessante acompanhar as outras categorias para evitar uma dependência muito grande de apenas uma delas.
 
 3. O desconto apresenta o mesmo comportamento em todos os canais?
 
