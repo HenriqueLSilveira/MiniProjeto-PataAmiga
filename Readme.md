@@ -178,21 +178,13 @@ Verificar um possível problema operacional neste processo nas lojas menores.
 Resultado consulta:
 
 | Categoria | Faturamento | Participação |
-
 |---|---:|---:|
-
 | Ração | R$ 1.076.202,55 | 60,01% |
-
 | Medicamento | R$ 305.904,03 | 17,06% |
-
 | Petisco | R$ 128.590,16 | 7,17% |
-
 | Serviço | R$ 94.001,37 | 5,24% |
-
 | Higiene | R$ 92.314,45 | 5,15% |
-
 | Acessório | R$ 64.661,39 | 3,61% |
-
 | Brinquedo | R$ 31.634,56 | 1,76% |
 
 A Ração representa aproximadamente 60% do faturamento em todos os portes de loja.
@@ -207,17 +199,11 @@ Há uma receita considerável nessa categoria, sendo a categoria de maior import
 Resultado consulta:
 
 | Canal | Sem desconto | Com desconto |
-
 |---|---:|---:|
-
 | App | R$ 167,63 | R$ 488,04 |
-
 | Loja Física | R$ 197,55 | R$ 494,04 |
-
 | Site | R$ 189,68 | R$ 501,92 |
-
 | Telefone | R$ 195,23 | R$ 514,02 |
-
 | WhatsApp | R$ 179,26 | R$ 514,33 |
 
 Os pedidos com desconto tiveram ticket médio maior em todos os canais analisados.
