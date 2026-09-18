@@ -155,7 +155,7 @@ Já a dimensão praça é relacionada por meio da bridge_loja_praca, permitindo 
 Resultado consulta:
 
 | Porte | Integração → Separação | Separação → Nota | Nota → Despacho | Despacho → Entrega | Total |
-|---|---:|
+|---|---:|---:|---:|---:|---:|
 | Pequena | 3,02 | 0,69 | 8,53 | 2,86 | 15,16 |
 | Média | 1,98 | 0,62 | 3,34 | 2,03 | 7,95 |
 | Grande | 1,96 | 0,64 | 3,32 | 2,01 | 7,93 |
@@ -174,7 +174,7 @@ Verificar um possível problema operacional neste processo nas lojas menores.
 Resultado consulta:
 
 | Categoria | Faturamento | Participação |
-|---|---:|
+|---|---:|---:|
 | Ração | R$ 1.076.202,55 | 60,01% |
 | Medicamento | R$ 305.904,03 | 17,06% |
 | Petisco | R$ 128.590,16 | 7,17% |
@@ -194,7 +194,7 @@ Há uma receita considerável nessa categoria, sendo a categoria de maior import
 Resultado consulta:
 
 | Canal | Sem desconto | Com desconto |
-|---|---:|
+|---|---:|---:|
 | App | R$ 167,63 | R$ 488,04 |
 | Loja Física | R$ 197,55 | R$ 494,04 |
 | Site | R$ 189,68 | R$ 501,92 |
@@ -249,7 +249,7 @@ a) Itens vendidos por mil habitantes
 As lojas com maiores índices encontrados foram:
 
 | Loja | Itens por 1.000 habitantes | Tempo médio de entrega |
-|---|---:|
+|---|---:|---:|
 | Rio dos Cedros | 41,87 | 14,24 dias |
 | Presidente Getúlio | 34,84 | 14,16 dias |
 | Ibirama | 32,07 | 15,39 dias |
