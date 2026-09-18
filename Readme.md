@@ -302,7 +302,8 @@ Depois de realizar o tratamento e as análises, os dados mostram três pontos im
 
 Antes de decidir sobre expansão, seria importante analisar concorrência, custos, demanda, logística e potencial de crescimento.
 
-Validações
+## Validações
+
 No final da construção foram conferidos os principais resultados:
 
 4.044 pedidos na fato;
