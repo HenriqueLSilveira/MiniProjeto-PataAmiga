@@ -195,28 +195,25 @@ Há uma receita considerável nessa categoria, sendo a categoria de maior import
 
 3. O desconto apresenta o mesmo comportamento em todos os canais?
 
-
 Resultado consulta:
 
 | Canal | Sem desconto | Com desconto |
-|---|---:|---:|
 | App | R$ 167,63 | R$ 488,04 |
 | Loja Física | R$ 197,55 | R$ 494,04 |
 | Site | R$ 189,68 | R$ 501,92 |
 | Telefone | R$ 195,23 | R$ 514,02 |
 | WhatsApp | R$ 179,26 | R$ 514,33 |
 
-Os pedidos com desconto tiveram ticket médio maior em todos os canais analisados.
+O ticket médio dos pedidos é maior quando há descontos, nos canais analisados, porém não é possível afirmar que devido a isso o cliente gastou mais.
 
-O App também teve uma participação importante no faturamento, representando 27,70% do total, com R$ 496.822,22.
+Outras variaveis podem ter sido consideradas como tipo de produto, quantidade de itens ou perfil do pedido.
 
-Porém, com estes dados, não é possível afirmar que o desconto fez o cliente gastar mais. Podem haver outros fatores envolvidos não
+Pedido pelo app representam 27,70% do total, com R$ 496.822,22.
 
-visíveis nos dados. Para verificar realmente o efeito do desconto seria necessário fazer uma análise mais específica.
 
 4. Qual praça concentra o faturamento?
 
-Para essa análise foi utilizado o fator de público da tabela bridge_loja_praca.
+Resultado baseado o fator de público da tabela bridge_loja_praca.
 
 O maior resultado foi encontrado no Vale do Itajai:
 
@@ -226,23 +223,16 @@ R$ 633.746,09 de faturamento rateado;
 
 R$ 4,28 de faturamento por domicílio.
 
-A comparação com as outras praças mostrou:
+A comparação mostrou:
 
 | Praça | Faturamento rateado |
-
-|---|---:|
-
 | Vale do Itajaí | R$ 633.746,09 |
-
 | Grande Florianópolis | R$ 283.546,75 |
-
 | Norte Industrial | R$ 175.431,90 |
-
 | Litoral Sul | R$ 137.051,20 |
-
 | Litoral Norte | R$ 128.872,75 |
 
-O uso do fator é importante porque uma loja pode atender mais de uma praça. Sem esse cálculo, o faturamento de uma loja poderia ser contado mais de uma vez.
+O uso do fator é importante para o faturamento de uma loja não ser contado mais de uma vez.
 
 Conferência:
 
@@ -261,17 +251,10 @@ a) Itens vendidos por mil habitantes
 As lojas com maiores índices encontrados foram:
 
 | Loja | Itens por 1.000 habitantes | Tempo médio de entrega |
-
-|---|---:|---:|
-
 | Rio dos Cedros | 41,87 | 14,24 dias |
-
 | Presidente Getúlio | 34,84 | 14,16 dias |
-
 | Ibirama | 32,07 | 15,39 dias |
-
 | Itapoá | 25,94 | 15,39 dias |
-
 | Santo Amaro da Imperatriz | 23,71 | 15,88 dias |
 
 Rio dos Cedros apresentou o maior indicador.
@@ -283,15 +266,9 @@ b) Faixa das franquias
 Considerando a faixa atual cadastrada:
 
 | Faixa | Faturamento |
-
-|---|---:|
-
 | Ouro | R$ 1.011.264,38 |
-
 | Diamante | R$ 382.209,74 |
-
 | Prata | R$ 314.812,03 |
-
 | Bronze | R$ 84.036,06 |
 
 As lojas Ouro apresentam o maior faturamento.
@@ -317,15 +294,13 @@ O número de pedidos sem entrega é especialmente relevante, porque representa a
 Conclusão
 Depois de realizar o tratamento e as análises, os dados mostram três pontos importantes:
 
-1.  O principal gargalo está entre a emissão da nota e o despacho;
+1.  O principal gargalo está entre a emissão da nota e o despacho, principalmente nas lojas de menor porte;
 
-2.  Ração representa a maior parte do faturamento da rede;
+2.  A venda de Ração representa a maior parte da receita da rede Pata Amiga;
 
-3.  Algumas lojas pequenas apresentam alta quantidade de itens vendidos por habitante, mas também possuem tempos de entrega elevados.
+3.  Algumas lojas pequenas apresentam alta quantidade  vendas por habitante, mas também possuem tempos de entrega elevados.
 
-Para uma possível expansão, começaria analisando Rio dos Cedros, seguida pelas outras localidades com indicadores altos.
-
-Antes da decisão seria importante analisar concorrência, custos, demanda, logística e potencial de crescimento.
+Antes de decidir sobre expansão, seria importante analisar concorrência, custos, demanda, logística e potencial de crescimento.
 
 Validações
 No final da construção foram conferidos os principais resultados:
