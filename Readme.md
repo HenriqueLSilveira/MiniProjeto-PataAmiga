@@ -1,46 +1,46 @@
 Mini Projeto Avaliativo - Módulo 2
 ANÁLISE DE DADOS — PROJETO PATA AMIGA
-Identificação
-Aluna: Thamiris Lopes
-
+Identificação:  Henrique Silveira
 Turma: Análise de Dados T2
 
 Base de dados: Dados Rede Pata Amiga
 
-Sobre o projeto
-Este projeto foi desenvolvido para analisar os dados da rede de pet shops Pata Amiga utilizando MySQL e um modelo dimensional.
+## O Projeto:
+O objetivo deste trabalho é permitir a analise dos dados da rede de pet shops Pata Amiga utilizando MySQL e um modelo dimensional e responder as perguntas de negócio do cliente.
+Para isso, os dados disponivilizados foram padronizados e organizados.
 
 A base possui 4.044 pedidos, realizados entre setembro de 2023 e março de 2024, além de informações sobre lojas, categorias de produtos e praças de atendimento.
 
-A ideia principal foi pegar os dados que estavam separados e com alguns problemas de padronização e organizá-los para conseguir responder às cinco perguntas propostas no projeto.
-
-📁 Estrutura do Projeto
+## Estrutura:
 O projeto contém os seguintes arquivos:
 
-Arquivos fornecidos
-00-conferencia.sql = Validação dos scripts
+Arquivos fornecidos para realizar o inicio do projeto:
 
-01-carga-staging.sql = Cria o banco e carrega os dados das tabelas de origem como vieram dos sistemas
+00-conferencia.sql 
 
-02-dimensoes-prontas.sql= Dimensões Prontas e Tabelas do modelo
+01-carga-staging.sql 
 
-06-Dados brutos = Dados brutos da base do cliente
+02-dimensoes-prontas.sql
 
-Arquivos de entrada
-03-dimensoes.sql = Dimensões preenchidas para análise
+06-Dados brutos
 
-04-fato.sql = Acontecimentos para responder questões analíticas
+Arquivos preenchidos com a analise:
+
+03-dimensoes.sql = Dimensões 
+
+04-fato.sql = Acontecimentos principais
 
 05-perguntas.sql = Respostas das perguntas de negócio
 
-README.md = Arquivo explicativo e de apresentação do projeto
+README.md = AApresentação do projeto
 
-diagrama.png= Diagrama do modelo estrela das tabelas
+diagrama.png= Diagrama do modelo estrela da modelagem do banco
 
-Pré-requisitos
-Antes de começar, certifique-se de ter o MySQL para execução do projeto
+## Pré-requisitos
 
-Como Executar o Projeto
+Certifique-se de ter o MySQL para execução do projeto!
+
+Como Executar?
 1. Abra os arquivos de scripts na ordem em que estão enumerados, a partir do '01'
 
 2. Copie todo o conteúdo
@@ -53,83 +53,69 @@ Como Executar o Projeto
 
 6. Clique em executar tudo
 
-Primeiro foram conferidos os dados recebidos, depois o staging foi carregado. Em seguida foram construídas as dimensões e a tabela ponte, depois a tabela fato e, por último, as consultas para responder às perguntas.
+Nesta sequência, primeiro foram realizadas conferêncidas dos dados brutos, depois o staging foi carregado. Em seguida, a construção das dimensões e a tabela ponte, depois a tabela fato e, por último, as consultas para responder às perguntas.
 
-Tratamento dos dados
-Antes de começar a criar as dimensões, foi necessário analisar como os dados estavam chegando.
+## Tratamento dos dados
+
 
 As tabelas de staging não foram alteradas. O tratamento foi feito durante a inserção dos dados nas tabelas dimensionais e na fato.
 
-**Datas: Um dos pontos que exigiu mais atenção foram as datas.
-
-As datas de pedido e integração com o ERP estavam no formato americano, por exemplo:
+-------
+Correção das datas no formato americano, exemplo:
 
 09/01/2023 10:27 AM
 
-Por isso foi necessário utilizar:
-
+Utilizando:
 
 STR_TO_DATE(campo, '%m/%d/%Y %h:%i %p') 
 
-
 Os marcos da entrega estavam em outro formato, YYYY-MM-DD, e foram tratados separadamente.
 
-**Valores: Os valores também não estavam todos no mesmo formato.
-
-Foram encontrados casos como:
+-------
+Os valores também não estavam padronizados. Foram encontrados casos como:
 
 R$ 1.850,00\
 
 1850.00\
 
-1.200
+Os valores vazios ou representados por - foram mantidos como NULL. 
 
-Os valores vazios ou representados por - foram mantidos como NULL. Isso é importante porque um valor desconhecido não significa que o valor seja zero.
-
-**Categorias:
-
-Foram encontradas 18 grafias diferentes de categorias.
+Haviam 18 grafias diferentes de categorias.
 
 Foi criada uma regra para transformar essas grafias em categorias padronizadas.
-
-Um cuidado importante foi com a categoria Ração Medicamentosa. Como ela possui RA no nome, a regra de MED precisava ser verificada antes da regra de RA. Caso contrário, ela seria classificada como Ração.
-
-**Lojas
 
 Também havia muitas formas diferentes de escrever o nome das lojas.
 
 Foi feita a padronização antes de realizar o relacionamento com a dim_loja.
 
-Além de remover /SC e espaços extras, foram corrigidos três nomes específicos:
+Além de remover /SC e espaços extras, também foram corrigidos:
 
 - **Blumenal** → Blumenau;
 - **Floripa** → Florianópolis;
 - **Jgua** → Jaraguá.
 
-Haviam 1.575 pedidos sem código da loja, mas somente 3 pedidos ficaram realmente sem identificação, pois não tinham nome de loja para fazer o relacionamento.
+Haviam 1.575 pedidos sem código da loja, porém no final somente 3 pedidos ficaram realmente sem identificação, pois não tinham nome de loja para fazer o relacionamento.
 
 Esses registros foram direcionados para a chave -1.
 
-**Canal e desconto
+Os valores de desconto foram padronizados para:
 
-  Os valores de desconto foram padronizados para:
-
-- **Sim**;
-- **Nao**;
-
-Nao Informado.
+- **Sim**
+- **Nao**
+- **Nao Informado**
 
 Os canais foram transformados em:
 
-- **App**;
-- **Site**;
-- **Loja Fisica**;
-- **Telefone**;
-- **WhatsApp**;
-- **Nao Informado**.
+- **App**
+- **Site**
+- **Loja Fisica**
+- **Telefone**
+- **WhatsApp**
+- **Nao Informado**
 
-No caso do canal, WHATS foi colocado antes de APP, porque a palavra WhatsApp contém “APP”.
+Para WHATS foi colocado antes de APP, porque a palavra WhatsApp contém “APP”.
 
+-------
 Diagnóstico da origem
     Antes do tratamento, os principais problemas encontrados foram:
 
