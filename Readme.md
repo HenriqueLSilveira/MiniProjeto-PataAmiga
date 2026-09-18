@@ -1,17 +1,22 @@
-Mini Projeto Avaliativo - Módulo 2
+## Mini Projeto Avaliativo - Módulo 2
+
 ANÁLISE DE DADOS — PROJETO PATA AMIGA
+
 Identificação:  Henrique Silveira
+
 Turma: Análise de Dados T2
 
 Base de dados: Dados Rede Pata Amiga
 
 ## O Projeto:
+
 O objetivo deste trabalho é permitir a analise dos dados da rede de pet shops Pata Amiga utilizando MySQL e um modelo dimensional e responder as perguntas de negócio do cliente.
 Para isso, os dados disponivilizados foram padronizados e organizados.
 
 A base possui 4.044 pedidos, realizados entre setembro de 2023 e março de 2024, além de informações sobre lojas, categorias de produtos e praças de atendimento.
 
 ## Estrutura:
+
 O projeto contém os seguintes arquivos:
 
 Arquivos fornecidos para realizar o inicio do projeto:
@@ -56,7 +61,6 @@ Como Executar?
 Nesta sequência, primeiro foram realizadas conferêncidas dos dados brutos, depois o staging foi carregado. Em seguida, a construção das dimensões e a tabela ponte, depois a tabela fato e, por último, as consultas para responder às perguntas.
 
 ## Tratamento dos dados
-
 
 As tabelas de staging não foram alteradas. O tratamento foi feito durante a inserção dos dados nas tabelas dimensionais e na fato.
 
@@ -142,7 +146,7 @@ Com a fato_pedido, contendo uma linha para cada pedido. Tem relação com relaci
 
 Já a dimensão praça é relacionada por meio da bridge_loja_praca, permitindo representar lojas que atendem mais de uma praça e realizar o rateio do faturamento.
 
-![Imagem da modelagem do banco](diagrama.png>)
+![Imagem da modelagem do banco](<diagrama.png>)
 
 ## ANÁLISES
 
